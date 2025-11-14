@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main() {
+    int num1,num2,END;
+
+    cout<<"Enter the value : ";
+    cin>>num1;
+    
+    cout<<"Enter the value : ";
+    cin>>num2;
+    
+    cout<<num1<<" + "<<num2<<" = "<<num1+num2;
+    cout<<"\n";
+    
+    cout<<num1<<" - "<<num2<<" = "<<num1-num2;
+    cout<<"\n";
+
+    cout<<num1<<" * "<<num2<<" = "<<num1*num2;
+    cout<<"\n";
+
+    cout<<num1<<" / "<<num2<<" = "<<num1/num2;
+
+    return 0;
+}
+
+//Output
+Enter the value : 45
+Enter the value : 5
+45 + 5 = 50
+45 - 5 = 40
+45 * 5 = 225
+45 / 5 = 9
