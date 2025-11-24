@@ -1,0 +1,91 @@
+#include <iostream>
+using namespace std;
+
+int add(int x, int y) {
+    return x + y;
+}
+
+int sub(int x, int y) {
+    return x - y;
+}
+
+int mul(int x, int y) {
+    return x * y;
+}
+
+int divi(int x, int y) {
+    return x / y;
+}
+
+int mod(int x, int y) {
+    return x % y;
+}
+
+int main() {
+    int num1, num2, choice;
+    
+    cout << "Enter a number: ";
+    cin >> num1;   
+    
+    cout << "Enter a number: ";
+    cin >> num2;
+    
+    cout << "\nChoose an operation:\n";
+    cout << "1. Addition \n";
+    cout << "2. Subtraction \n";
+    cout << "3. Multiplication \n";
+    cout << "4. Division \n";
+    cout << "5. Moduleas \n";
+    cout << "6. Want all the operations\n\n";
+    cout << "Enter choice: ";
+    cin >> choice; 
+    
+    switch (choice) {
+        case 1:
+            cout << "Addition = " << add(num1,num2);
+            break;
+        case 2:
+            cout << "Subtraction = " << sub(num1,num2);
+            break;
+        case 3:
+            cout << "Multiplication = " << mul(num1,num2);
+            break;
+        case 4:
+            cout << "Division = " << divi(num1,num2);
+            break;
+        case 5:
+            cout << "Moduleas = " << mod(num1,num2);
+            break;
+        case 6:
+            cout << "Do you want it all, This is the Result!!";
+            cout << "\nAddition = " << add(num1,num2);
+            cout << "\nSubtraction = " << sub(num1,num2);
+            cout << "\nMultiplication = " << mul(num1,num2);
+            cout << "\nDivision = " << divi(num1,num2);
+            cout << "\nModuleas = " << mod(num1,num2);
+            break;
+        default:
+            cout << "Invalid choice !!!";
+    }
+    return 0;
+}
+
+//Output
+Enter a number: 90
+Enter a number: 15
+
+Choose an operation:
+1. Addition 
+2. Subtraction 
+3. Multiplication 
+4. Division 
+5. Moduleas 
+6. Want all the operations
+
+Enter choice: 6
+Do you want it all, This is the Result!!
+Addition = 105
+Subtraction = 75
+Multiplication = 1350
+Division = 6
+Moduleas = 0
