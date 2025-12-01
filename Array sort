@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    
+    int size, i;
+    cout << "Enter the size of array : ";
+    cin >> size;
+    
+    int arr[size], sum = 0;
+
+    for(i = 0; i < size; i++){
+        cout << "Enter the element " << i+1 << " : ";
+        cin >> arr[i];
+        sum += arr[i];
+    }
+    
+    cout << "\nYour Array is : ";
+    for(i = 0; i < size; i++){
+        cout << arr[i] << " ";
+    }
+
+    for (int j = 0; j < size - 1; j++) {
+        for (int k = 0; k < size - j - 1; k++) {
+            if (arr[k] > arr[k+1]) {
+                int temp = arr[k];
+                arr[k] = arr[k+1];
+                arr[k+1] = temp;
+            }
+        }
+    }
+
+    cout << "\nSorted Array : ";
+    for(i = 0; i < size; i++){
+        cout << arr[i] << " ";
+    }
+    
+    return 0;
+}
+
+//Output
+Enter the size of array : 5
+Enter the element 1 : 15
+Enter the element 2 : 24
+Enter the element 3 : 35
+Enter the element 4 : 16
+Enter the element 5 : 9
+
+Your Array is : 15 24 35 16 9 
+Sorted Array : 9 15 16 24 35 
