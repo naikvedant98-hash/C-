@@ -1,0 +1,61 @@
+#include <iostream>
+using namespace std;
+
+struct Student {
+    int id;
+    float marks;
+};
+
+int main() {
+    int count;
+    cout << "Enter the number of students: ";
+    cin >> count;
+
+    Student s[count];
+
+    for (int i = 0; i < count; i++) {
+        cout << "\nEnter Student ID: ";
+        cin >> s[i].id;
+
+        cout << "Enter Marks: ";
+        cin >> s[i].marks;
+    }
+
+    cout << "\n--- Student Details ---\n";
+    for (int i = 0; i < count; i++) {
+        cout << "Student ID: " << s[i].id << endl;
+        cout << "Marks: " << s[i].marks  << endl;
+    }
+
+    return 0;
+}
+
+//Output
+Enter the number of students: 5
+
+Enter Student ID: 1
+Enter Marks: 93
+
+Enter Student ID: 2
+Enter Marks: 95
+
+Enter Student ID: 3
+Enter Marks: 94
+
+Enter Student ID: 4
+Enter Marks: 90
+
+Enter Student ID: 5
+Enter Marks: 87
+
+--- Student Details ---
+Student ID: 1
+Marks: 93
+Student ID: 2
+Marks: 95
+Student ID: 3
+Marks: 94
+Student ID: 4
+Marks: 90
+Student ID: 5
+Marks: 87
