@@ -80,3 +80,24 @@ int main() {
     
     return 0;
 }
+
+//Output
+
+Enter the value of num1 : 45
+Enter the value of num2 : 9
+
+Choose an operation:
+1. Addition 
+2. Subtraction 
+3. Multiplication 
+4. Division 
+5. Moduleas 
+6. Want all the operations
+
+Enter your choice: 6
+Do you want it all, This is the Result!!
+Addition = 54
+Subtraction = 36
+Multiplication = 405
+Division = 5
+Moduleas = 0
