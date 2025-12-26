@@ -1,0 +1,107 @@
+#include <iostream>
+using namespace std;
+
+class fact {
+public:
+    long long calci(int n) {
+        long long f = 1;
+        for (int i = 1; i <= n; i++)
+            f *= i;
+        return f;
+    }
+};
+
+class arm {
+public:
+    int isArm(int n) {
+        int original = n, sum = 0;
+        while (n > 0) {
+            int rem = n % 10;
+            sum += rem * rem * rem;
+            n /= 10;
+        }
+        return (original == sum);
+    }
+};
+
+class reverse {
+public:
+    int revNum(int n) {
+        int rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + (n % 10);
+            n /= 10;
+        }
+        return rev;
+    }
+};
+
+class palin {
+public:
+    int isPalin(int n) {
+        int original = n, rev = 0;
+        while (n > 0) {
+            rev = rev * 10 + (n % 10);
+            n /= 10;
+        }
+        return (original == rev);
+    }
+};
+
+int main() {
+    int choice, num;
+
+    cout << "\nChoose an operation:\n";
+    cout << "1. Factorial\n";
+    cout << "2. Armstrong\n";
+    cout << "3. Reverse\n";
+    cout << "4. Palindrome\n";
+    cout << "Enter your choice: ";
+    cin >> choice;
+
+    cout << "Enter number: ";
+    cin >> num;
+
+    switch (choice) {
+        case 1: {
+            fact f;
+            cout << "Factorial = " << f.calci(num);
+            break;
+        }
+        case 2: {
+            arm a;
+            if (a.isArm(num))
+                cout << num << " is an Armstrong number";
+            else
+                cout << num << " is NOT an Armstrong number";
+            break;
+        }
+        case 3: {
+            reverse r;
+            cout << "Reversed number = " << r.revNum(num);
+            break;
+        }
+        case 4: {
+            palin p;
+            if (p.isPalin(num))
+                cout << num << " is a Palindrome number";
+            else
+                cout << num << " is NOT a Palindrome number";
+            break;
+        }
+        default:
+            cout << "Invalid choice!";
+    }
+
+    return 0;
+}
+
+//Output
+Choose an operation:
+1. Factorial
+2. Armstrong
+3. Reverse
+4. Palindrome
+Enter your choice: 4
+Enter number: 151
+151 is a Palindrome number
