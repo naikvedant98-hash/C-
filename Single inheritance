@@ -1,0 +1,87 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+
+class Car{
+public:
+    void c1(){
+        cout << "Car 1 : BMW" << endl;    
+    }
+};
+
+class Car1 : public Car{
+public:
+    void c2(){
+        cout << "Car 2 : Mustang" << endl;
+    }
+};
+
+class Car2 : public Car{
+public:
+    void c3(){
+        cout << "Car 3 : Mercedes" << endl;
+    }
+};
+
+class Car3 : public Car{
+public:
+    void c4(){
+        cout << "Car 4 : Jaguar" << endl;
+    }
+};
+
+class Car4 : public Car{
+public:
+    void c5(){
+        cout << "Car 5 : Rolls Royce" << endl;
+    }
+};
+
+class Car5 : public Car{
+public:
+    void c6(){
+        cout << "Car 6 : Ferrari" << endl;
+    }
+};
+
+class Car6 : public Car{
+public:
+    void c7(){
+        cout << "Car 7 : Lamborgini" << endl;
+    }
+};
+
+int main() {
+    
+    Car w;
+    w.c1();
+    
+    Car1 x;
+    x.c2();
+    
+    Car2 y;
+    y.c3();
+    
+    Car3 z;
+    z.c4();
+    
+    Car4 a;
+    a.c5();
+    
+    Car5 b;
+    b.c6();
+    
+    Car6 c;
+    c.c7();
+    
+    return 0;
+}
+
+//Output
+Car 1 : BMW
+Car 2 : Mustang
+Car 3 : Mercedes
+Car 4 : Jaguar
+Car 5 : Rolls Royce
+Car 6 : Ferrari
+Car 7 : Lamborgini
