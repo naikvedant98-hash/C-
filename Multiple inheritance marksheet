@@ -1,0 +1,101 @@
+#include <iostream>
+using namespace std;
+
+class Person {
+protected:
+    string name;
+public:
+    void setName(string n) {
+        name = n;
+    }
+};
+
+class Student : public Person {
+protected:
+    int rollNo;
+public:
+    void setRollNo(int r) {
+        rollNo = r;
+    }
+};
+
+class Subjects : public Student {
+protected:
+    int English, Marathi, Hindi, Maths, Science;
+public:
+    void setMarks(int eng, int mar, int hin, int maths, int sci) {
+        English = eng;
+        Marathi = mar;
+        Hindi = hin;
+        Maths = maths;
+        Science = sci;
+    }
+};
+
+class Result : public Subjects {
+public:
+    void display() {
+        cout << "\n----- Student Result -----\n";
+        cout << "Name : " << name << endl;
+        cout << "Roll No : " << rollNo << endl;
+        cout << "English : " << English << endl;
+        cout << "Marathi : " << Marathi << endl;
+        cout << "Hindi : " << Hindi << endl;
+        cout << "Maths : " << Maths << endl;
+        cout << "Science : " << Science << endl;
+    }
+};
+
+int main() {
+    Result r;
+    string name;
+    int roll, eng, mar, hin, maths, sci;
+
+    cout << "Enter your Name : ";
+    cin >> name;
+
+    cout << "Enter your Roll No : ";
+    cin >> roll;
+
+    cout << "Enter your English Marks : ";
+    cin >> eng;
+
+    cout << "Enter your Marathi Marks : ";
+    cin >> mar;
+
+    cout << "Enter your Hindi Marks : ";
+    cin >> hin;
+
+    cout << "Enter your Maths Marks : ";
+    cin >> maths;
+
+    cout << "Enter your Science Marks : ";
+    cin >> sci;
+
+    r.setName(name);
+    r.setRollNo(roll);
+    r.setMarks(eng, mar, hin, maths, sci);
+
+    r.display();
+
+    return 0;
+}
+
+//Output
+Enter your Name : Vedant
+Enter your Roll No : 17
+Enter your English Marks : 82
+Enter your Marathi Marks : 86
+Enter your Hindi Marks : 90
+Enter your Maths Marks : 97
+Enter your Science Marks : 95
+
+----- Student Result -----
+Name : Vedant
+Roll No : 17
+English : 82
+Marathi : 86
+Hindi : 90
+Maths : 97
+Science : 95
+
