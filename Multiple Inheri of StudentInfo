@@ -1,0 +1,107 @@
+#include <iostream>
+using namespace std;
+
+class A {
+public:
+    void displayA() {
+        cout << "DisplayA() from class A" << endl;
+    }
+};
+
+class B {
+public:
+    void displayB() {
+        cout << "DisplayB() from class B \n" << endl;
+    }
+};
+
+class Student {
+protected:
+    string name;
+    int roll_no;
+
+public:
+    void StudentInfo() {
+        cout << "Enter your Name: ";
+        cin >> name;
+
+        cout << "Enter your Roll No: ";
+        cin >> roll_no;
+    }
+};
+
+class Marks {
+protected:
+    int marks [5];
+    int total = 0;
+    float percentage;
+
+public:
+    void getMarks() {
+        cout << "Enter marks of 5 subjects:\n";
+        for (int i = 0; i < 5; i++) {
+            cout << "Subject " << i + 1 << ": ";
+            cin >> marks[i];
+            total += marks[i];
+        }
+        percentage = total / 5.0;
+    }
+};
+
+class Result : public A, public B, public Student, public Marks {
+public:
+    char CalculateGrade() {
+        if (percentage >= 90)
+            return 'A';
+        else if (percentage >= 75)
+            return 'B';
+        else if (percentage >= 60)
+            return 'C';
+        else if (percentage >= 35)
+            return 'D';
+        else
+            return 'F';
+    }
+
+    void displayResult() {
+        cout << "\n----- Student Result -----\n";
+        cout << "Name : " << name << endl;
+        cout << "Roll No : " << roll_no << endl;
+        cout << "Total Marks : " << total << endl;
+        cout << "Percentage : " << percentage << "%" << endl;
+        cout << "Grade : " << CalculateGrade() << endl;
+    }
+};
+
+int main() {
+    Result r;
+
+    r.displayA();
+    r.displayB();
+
+    r.StudentInfo();
+    r.getMarks();
+    r.displayResult();
+
+    return 0;
+}
+
+//Output
+DisplayA() from class A
+DisplayB() from class B 
+
+Enter your Name: Vedant
+Enter your Roll No: 17
+Enter marks of 5 subjects:
+Subject 1: 96
+Subject 2: 86
+Subject 3: 94
+Subject 4: 87
+Subject 5: 93
+
+----- Student Result -----
+Name        : Vedant
+Roll No     : 17
+Total Marks : 456
+Percentage  : 91.2%
+Grade       : A
