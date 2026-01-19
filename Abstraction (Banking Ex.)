@@ -97,16 +97,8 @@ Account created successfully!
 3. Check Balance
 4. Exit
 Enter your choice: 1
-Enter the amount to be deposited : 5000
-Deposited: 5000
-
------ Bank Menu -----
-1. Deposit
-2. Withdraw
-3. Check Balance
-4. Exit
-Enter your choice: 3
-Current Balance: 5000
+Enter the amount to be deposited: 10000
+Deposited: 10000
 
 ----- Bank Menu -----
 1. Deposit
@@ -114,8 +106,8 @@ Current Balance: 5000
 3. Check Balance
 4. Exit
 Enter your choice: 2
-Enter the amount to be withdrawn : 2000
-Withdrawn: 2000
+Enter the amount to be withdrawn: 3000
+Withdrawn: 3000
 
 ----- Bank Menu -----
 1. Deposit
@@ -123,5 +115,16 @@ Withdrawn: 2000
 3. Check Balance
 4. Exit
 Enter your choice: 3
-Current Balance: 3000
+Current Balance: 7000
+
+----- Bank Menu -----
+1. Deposit
+2. Withdraw
+3. Check Balance
+4. Exit
+Enter your choice: 4
+Thank you for using the bank system!
+
+
+=== Code Execution Successful ===
  
